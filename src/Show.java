@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Show {
@@ -15,9 +14,10 @@ public class Show {
 
     public void addActor(Actor actor) {
         if (listOfActors.contains(actor)) {
-            System.out.println("Актер " + actor + "уже учавствует");
+            System.out.println("Актер " + actor + " уже учавствует");
         } else {
             listOfActors.add(actor);
+            System.out.println("Актер " + actor + " добавлен");
         }
     }
 
@@ -26,6 +26,7 @@ public class Show {
             Actor current = listOfActors.get(i);
             if (current.surname.equalsIgnoreCase(oldSurname)) {
                 listOfActors.set(i, newActor);
+                System.out.println("Актер " + current.surname + " заменен на " + newActor.surname);
                 return;
             }
         }
@@ -37,6 +38,11 @@ public class Show {
         for (Actor actor : listOfActors) {
             System.out.println(actor);
         }
+        System.out.println();
+    }
+
+    public void printInfo () {
+        System.out.println("Спектакль: " + title + ". Режисер: " + director);
         System.out.println();
     }
 }

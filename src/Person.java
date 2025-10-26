@@ -1,7 +1,7 @@
 public class Person {
-    public String name;
-    public String surname;
-    public Gender gender;
+    protected String name;
+    protected String surname;
+    protected Gender gender;
 
     public Person(String name, String surname, Gender gender) {
         this.name = name;
@@ -12,5 +12,29 @@ public class Person {
     @Override
     public String toString() {
         return name + " " + surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 }

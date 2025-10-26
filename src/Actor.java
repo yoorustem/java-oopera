@@ -12,6 +12,10 @@ public class Actor extends Person{
         return height;
     }
 
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     @Override
     public java.lang.String toString() {
         return super.toString() + ", рост " + height + " см";
